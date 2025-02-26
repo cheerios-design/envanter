@@ -28,7 +28,7 @@
 
     /* Define the animation utility */
     .animate-blob {
-        animation: blob 7s infinite ease-in-out;
+        animation: blob 6s infinite ease-in-out;
     }
 
     .animation-delay-1000 {
