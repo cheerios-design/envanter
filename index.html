@@ -13,6 +13,8 @@
     <meta name="author" content="Envanter Development Team">
     <title>ENVANTER</title>
     <link rel="stylesheet" href="styles/output.css">
+    <link rel="shortcut icon" href="assets/icons/envanterconsulting_logomark_black_trans_full_color_rgb.svg"
+        type="image/x-icon">
 </head>
 
 <body>
@@ -28,7 +30,8 @@
                 </div>
                 <div class="flex lg:hidden">
                     <button type="button"
-                        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                        id="mobile-menu-button">
                         <span class="sr-only">Open main menu</span>
                         <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                             aria-hidden="true" data-slot="icon">
@@ -49,7 +52,7 @@
                 </div>
             </nav>
             <!-- Mobile menu, show/hide based on menu open state. -->
-            <div class="lg:hidden" role="dialog" aria-modal="true">
+            <div class="lg:hidden hidden" role="dialog" aria-modal="true" id="mobile-menu">
                 <!-- Background backdrop, show/hide based on slide-over state. -->
                 <div class="fixed inset-0 z-50"></div>
                 <div
@@ -176,6 +179,7 @@
 
     <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
     <script src="scripts/popUp.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>
