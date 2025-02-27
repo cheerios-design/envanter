@@ -2,6 +2,82 @@
 @import "flowbite/src/themes/default";
 @plugin "flowbite/plugin";
 
+:root {
+    --font-heading: "Nunito Sans", sans;
+    --font-paragraph: "Quicksand", sans-serif;
+    --font-accent: "Montserrat", monospace;
+    --color-accent: #f9a826;
+    --color-accent-300: #dd8a06;
+    --color-primary-300: #718096;
+    --color-primary-500: #4a5568;
+    --color-primary-600: #2d3748;
+    --color-primary-700: #1a202c;
+}
+
+.font-heading {
+    font-family: var(--font-heading);
+    font-weight: 800;
+}
+
+.font-paragraph {
+    font-family: var(--font-paragraph);
+    font-weight: 500;
+}
+
+.font-accent {
+    font-family: var(--font-accent);
+    font-weight: 600;
+}
+
+.color-accent {
+    color: var(--color-accent);
+}
+
+.color-accent-300 {
+    color: var(--color-accent-300);
+}
+
+.bg-accent {
+    background-color: var(--color-accent);
+}
+
+.bg-accent-300 {
+    background-color: var(--color-accent-300);
+}
+
+.color-primary-300 {
+    color: var(--color-primary-300);
+}
+
+.color-primary-500 {
+    color: var(--color-primary-500);
+}
+
+.color-primary-600 {
+    color: var(--color-primary-600);
+}
+
+.color-primary-700 {
+    color: var(--color-primary-700);
+}
+
+.bg-primary-300 {
+    background-color: var(--color-primary-300);
+}
+
+.bg-primary-500 {
+    background-color: var(--color-primary-500);
+}
+
+.bg-primary-600 {
+    background-color: var(--color-primary-600);
+}
+
+.bg-primary-700 {
+    background-color: var(--color-primary-700);
+}
+
+
 /* Ensure your animation keyframes are defined inside a @layer directive */
 @layer utilities {
     @keyframes blob {
@@ -18,7 +94,7 @@
         }
 
         75% {
-            transform: translate(0px, -30px) scale(1.2);
+            transform: translate(0px, -30px) scale(1.1);
         }
 
         100% {
@@ -28,7 +104,7 @@
 
     /* Define the animation utility */
     .animate-blob {
-        animation: blob 6s infinite ease-in-out;
+        animation: blob 4s infinite linear ease-in-out;
     }
 
     .animation-delay-1000 {

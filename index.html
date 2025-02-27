@@ -11,6 +11,11 @@
     <meta name="keywords" content="Envanter, supplier platform, consumer platform, 
         business tools, contract management, product pricing, supplier profiles, modern marketplace">
     <meta name="author" content="Envanter Development Team">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
     <title>ENVANTER</title>
     <link rel="stylesheet" href="styles/output.css">
     <link rel="shortcut icon" href="assets/icons/envanterconsulting_logomark_black_trans_full_color_rgb.svg"
@@ -18,164 +23,162 @@
 </head>
 
 <body>
-    <div class="bg-white">
-        <header class="absolute inset-x-0 top-0 z-50">
-            <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-                <div class="flex lg:flex-1">
-                    <a href="#" class="-m-1.5 p-1.5">
-                        <span class="sr-only">Envanter</span>
-                        <img class="h-12 w-auto"
-                            src="assets/icons/envanterconsulting_logomark_colored_full_color_rgb.svg" alt="">
-                    </a>
-                </div>
-                <div class="flex lg:hidden">
-                    <button type="button"
-                        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-                        id="mobile-menu-button">
+    <header>
+        <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800 filter backdrop-blur-sm">
+            <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+                <a href="https://en-vanter.com" class="flex items-center">
+                    <img src="https://en-vanter.com/assets/icons/envanterconsulting_logomark_colored_full_color_rgb.svg"
+                        class="mr-3 h-6 sm:h-9" alt="Envanter Logo" />
+                    <span
+                        class="self-center text-xl font-semibold uppercase font-heading whitespace-nowrap dark:text-white">Envanter</span>
+                </a>
+                <div class="flex items-center lg:order-2">
+                    <a href="#"
+                        class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium font-accent rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800">Log
+                        in</a>
+                    <a href="#"
+                        class="text-white bg-accent hover:bg-accent focus:ring-4 focus:ring-primary-300 font-medium font-accent rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">Get
+                        started</a>
+                    <button data-collapse-toggle="mobile-menu-2" type="button"
+                        class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                        aria-controls="mobile-menu-2" aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
-                        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                            aria-hidden="true" data-slot="icon">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
                         </svg>
                     </button>
                 </div>
-                <div class="hidden lg:flex lg:gap-x-12">
-                    <a href="#" class="text-sm/6 uppercase font-semibold text-gray-900">Product</a>
-                    <a href="#" class="text-sm/6 uppercase font-semibold text-gray-900">Features</a>
-                    <a href="#" class="text-sm/6 uppercase font-semibold text-gray-900">About</a>
-                    <a href="#" class="text-sm/6 uppercase font-semibold text-gray-900">Support</a>
-                </div>
-                <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a href="#" class="text-sm/6 font-semibold text-gray-900">Log in <span
-                            aria-hidden="true">&rarr;</span></a>
-                </div>
-            </nav>
-            <!-- Mobile menu, show/hide based on menu open state. -->
-            <div class="lg:hidden hidden" role="dialog" aria-modal="true" id="mobile-menu">
-                <!-- Background backdrop, show/hide based on slide-over state. -->
-                <div class="fixed inset-0 z-50"></div>
-                <div
-                    class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-                    <div class="flex items-center justify-between">
-                        <a href="#" class="-m-1.5 p-1.5">
-                            <span class="sr-only">Your Company</span>
-                            <img class="h-8 w-auto"
-                                src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-                                alt="">
-                        </a>
-                        <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-                            <span class="sr-only">Close menu</span>
-                            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                                aria-hidden="true" data-slot="icon">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="mt-6 flow-root">
-                        <div class="-my-6 divide-y divide-gray-500/10">
-                            <div class="space-y-2 py-6">
-                                <a href="#"
-                                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Product</a>
-                                <a href="#"
-                                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Features</a>
-                                <a href="#"
-                                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Marketplace</a>
-                                <a href="#"
-                                    class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Company</a>
-                            </div>
-                            <div class="py-6">
-                                <a href="#"
-                                    class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">Log
-                                    in</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+                <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+                    <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+                        <li>
+                            <a href="#"
+                                class="block py-2 pr-4 pl-3 font-accent text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pr-4 pl-3 font-accent text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Product</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 pr-4 pl-3 font-accent text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Features</a>
+                        </li>
 
-        <div class="relative isolate px-4 pt-6 lg:px-6">
-            <div
-                class="absolute top-22 -left-0 w-110 h-110 bg-indigo-500 rounded-full filter blur-3xl opacity-65 mix-blend-color-burn animate-blob animation-delay-1000 ">
+                        <li>
+                            <a href="#"
+                                class="block py-2 pr-4 pl-3 font-accent text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div
-                class="absolute top-30 left-30 w-110 h-110 bg-indigo-400 rounded-full filter blur-3xl opacity-65 mix-blend-color-burn animate-blob animation-delay-3000 ">
-            </div>
-            <div
-                class="absolute top-38 left-60 w-110 h-110 bg-yellow-300 rounded-full filter blur-3xl opacity-65 mix-blend-color-burn animate-blob animation-delay-1000  ">
-            </div>
-            <div
-                class="absolute top-42 left-90 w-110 h-110 bg-yellow-200 rounded-full filter blur-3xl opacity-65 mix-blend-color-burn animate-blob animation-delay-1000 ">
-            </div>
-            <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-                <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+        </nav>
+    </header>
+    <main>
+        <section id="hero" class=" bg-white dark:bg-gray-900">
+            <div class="container relative isolate px-4 pt-6 lg:px-6">
+                <div class="background bg-cover absolute inset-0 z-[-1]">
                     <div
-                        class="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                        Understand our vision. <a href="#" class="font-semibold text-indigo-600"><span
-                                class="absolute inset-0" aria-hidden="true"></span>Read more <span
-                                aria-hidden="true">&rarr;</span></a>
+                        class="absolute top-0 -left-15 md:w-110 md:h-110 sm:w-5 sm:h-5 bg-indigo-500 rounded-full filter blur-2xl opacity-75 sm:opacity-55 mix-blend-screen animate-blob animation-delay-1000">
+                    </div>
+                    <div
+                        class="absolute top-6 left-21 md:w-110 md:h-110 sm:w-5 sm:h-5 bg-indigo-400 rounded-full filter blur-2xl opacity-75 sm:opacity-55 mix-blend-color-light animate-blob animation-delay-3000">
+                    </div>
+                    <div
+                        class="absolute top-12 left-27 md:w-110 md:h-110 sm:w-5 sm:h-5 bg-indigo-500 rounded-full filter blur-2xl opacity-75 sm:opacity-55 mix-blend-screen animate-blob animation-delay-1000">
+                    </div>
+                    <div
+                        class="absolute top-18 left-32 md:w-110 md:h-110 sm:w-5 sm:h-5 bg-indigo-400 rounded-full filter blur-2xl opacity-75 sm:opacity-55 mix-blend-color-light animate-blob animation-delay-3000">
                     </div>
                 </div>
-                <div class="text-center">
-                    <h1 class="text-4xl uppercase font-semibold tracking-tight text-balance text-gray-900 sm:text-6xl">
+                <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+                    <a href="#"
+                        class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm hover:ring-2 hover:ring-amber-400 text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
+                        role="alert">
+                        <span
+                            class="text-xs font-accent bg-primary-600 rounded-full text-white hover:text-amber-400 px-4 py-1.5 mr-3">New</span>
+                        <span class="text-sm font-paragraph font-medium">Understand our vision</span>
+                        <svg class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                    <h1
+                        class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
                         Seamless
-                        Connection Between Suppliers and Consumers</h1>
-                    <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">Experience a fast,
+                        Connection <br> Between Suppliers and <br>Consumers</h1>
+                    <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+                        Experience a fast,
                         reliable, and transparent platform that bridges the gap between suppliers and consumers.</p>
-                    <div class="mt-10 flex items-center justify-center gap-x-6">
+                    <div
+                        class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
                         <a href="#"
-                            class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get
-                            started</a>
-                        <a href="#" class="text-sm/6 font-semibold text-gray-900">Learn more <span
-                                aria-hidden="true">→</span></a>
+                            class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+                            Learn more
+                            <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+                            Get started
+
+                        </a>
                     </div>
+
                 </div>
-            </div>
-
-        </div>
-    </div>
-    </div>
-
-
+        </section>
+    </main>
 
     <footer>
-
     </footer>
-    <div id="popup-modal" tabindex="-1"
-        class="hidden overflow-y-auto backdrop-blur-sm overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-        <div class="relative p-4 w-full max-w-md max-h-full">
-            <div class="relative bg-white rounded-lg shadow-sm dark:bg-gray-700">
+    <!-- <div id="popup-modal" tabindex="-1"
+        class="hidden fixed inset-0 flex justify-center items-center bg-black/50 backdrop-blur-sm z-50">
+        <div class="relative w-full max-w-md p-4">
+            <div class="relative bg-white rounded-lg shadow-lg dark:bg-gray-700">
                 <button type="button"
-                    class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                    class="absolute top-3 right-3 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg w-8 h-8 flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
                     data-modal-hide="popup-modal">
-                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 14 14">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
                     </svg>
                     <span class="sr-only">Close modal</span>
                 </button>
-                <div class="p-4 md:p-5 text-center">
-                    <img src="assets/icons/black-trans.svg" alt="cheeriostudios logo">
-                    <h3 class="mb-5 text-lg font-paragraph font-normal text-gray-500 dark:text-gray-400"><span
-                            class="font-accent">Hello There!</span> <br> Please note
-                        that this website is currently <span class="text-amber-500">under maintenance</span> by <span
-                            class="text-amber-500 hover:underline"> <a href="https://cheeriostudios.com/"
-                                target="_blank" rel="noopener noreferrer">Cheerio
-                                Studio</a></span> and some
-                        elements can be a little off. For any
-                        problems and concerns send us an email: <span
-                            class="underline text-amber-600">sam.d@cheeriostudios.com</span>
+                <div class="p-6 text-center">
+                    <img src="assets/icons/black-trans.svg" alt="cheeriostudios logo" class="mx-auto w-16 sm:w-20">
+                    <h3 class="mb-5 text-lg font-paragraph font-normal text-gray-500 dark:text-gray-400">
+                        <span class="font-accent">Hello There!</span> <br> Please note that this website is currently
+                        <span class="text-amber-500">under maintenance</span> by
+                        <span class="text-amber-500 hover:underline">
+                            <a href="https://cheeriostudios.com/" target="_blank" rel="noopener noreferrer">
+                                Cheerio Studio
+                            </a>
+                        </span>
+                        and some elements can be a little off. For any problems and concerns, send us an email:
+                        <span class="underline text-amber-600">sam.d@cheeriostudios.com</span>
                     </h3>
                     <button data-modal-hide="popup-modal" type="button"
-                        class="text-white bg-amber-300 hover:bg-amber-500 focus:ring-4 focus:outline-none focus:ring-amber-200 dark:focus:ring-amber-300 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center">
+                        class="text-white bg-amber-300 hover:bg-amber-500 focus:ring-4 focus:outline-none focus:ring-amber-200 dark:focus:ring-amber-300 font-medium rounded-lg text-sm px-5 py-2.5">
                         I Understand!
                     </button>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
+
 
     <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
     <script src="scripts/popUp.js"></script>

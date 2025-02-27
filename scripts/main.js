@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const mobileMenuButton = document.getElementById("mobile-menu-button");
   const mobileMenu = document.getElementById("mobile-menu");
-  const closeMenuButton = mobileMenu.querySelector("button");
+  const closeMenuButton = document.getElementById("close-menu-button");
 
   mobileMenuButton.addEventListener("click", function () {
     mobileMenu.classList.toggle("hidden");
