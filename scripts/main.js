@@ -1,16 +1,16 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const mobileMenuButton = document.getElementById("mobile-menu-button");
-  const mobileMenu = document.getElementById("mobile-menu");
-  const closeMenuButton = document.getElementById("close-menu-button");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const mobileMenuButton = document.getElementById("mobile-menu-button");
+//   const mobileMenu = document.getElementById("mobile-menu");
+//   const closeMenuButton = document.getElementById("close-menu-button");
 
-  mobileMenuButton.addEventListener("click", function () {
-    mobileMenu.classList.toggle("hidden");
-  });
+//   mobileMenuButton.addEventListener("click", function () {
+//     mobileMenu.classList.toggle("hidden");
+//   });
 
-  closeMenuButton.addEventListener("click", function () {
-    mobileMenu.classList.add("hidden");
-  });
-});
+//   closeMenuButton.addEventListener("click", function () {
+//     mobileMenu.classList.add("hidden");
+//   });
+// });
 document
   .querySelectorAll('[data-modal-hide="popup-modal"]')
   .forEach((button) => {
