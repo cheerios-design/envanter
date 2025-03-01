@@ -16,3 +16,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// document
+//   .querySelectorAll('[data-modal-hide="popup-modal"]')
+//   .forEach((button) => {
+//     button.addEventListener("click", function () {
+//       document.getElementById("popup-modal").classList.add("hidden");
+//     });
+//   });
+
+// document
+//   .querySelectorAll('[data-menu-hide="mobile-menu"]')
+//   .forEach((button) => {
+//     button.addEventListener("click", function () {
+//       mobileMenu.classList.add("hidden");
+//     });
+//   });
