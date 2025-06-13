@@ -77,3 +77,35 @@
         animation-delay: 3s;
     }
 }
+
+/* Loading animations */
+@layer components {
+    .skeleton {
+        @apply animate-pulse bg-gray-200 rounded;
+    }
+
+    .skeleton-text {
+        @apply h-4 bg-gray-200 rounded w-3/4 mb-2;
+    }
+
+    .skeleton-card {
+        @apply p-6 bg-white rounded-lg shadow-sm;
+    }
+}
+
+/* Error states */
+.error-message {
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

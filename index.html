@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Envanter - Connect Suppliers and Consumers">
+    <meta property="og:description" content="Experience a fast, reliable platform bridging suppliers and consumers">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://en-vanter.com">
     <meta name="description" content="Envanter - The ultimate platform 
         connecting suppliers and consumers seamlessly with transparent pricing, 
         profiles, and streamlined contracts.">
@@ -140,6 +145,47 @@
 
                 </div>
         </section>
+        <!-- Search and Filter Section -->
+        <section class="py-8 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="flex flex-col md:flex-row gap-4">
+                        <input type="search" id="product-search"
+                            class="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                            placeholder="Search products..." aria-label="Search products">
+                        <select id="category-filter"
+                            class="px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                            aria-label="Filter by category">
+                            <option value="">All Categories</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-heading font-bold text-center mb-12">Our Products</h2>
+                <div id="error-container"></div>
+                <div id="products-container"
+                    class="grid grid-cols-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <!-- Product cards will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Exchange Rates Widget -->
+        <section class="py-8 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <div class="text-center">
+                    <h3 class="text-xl font-heading mb-4">Current Exchange Rates</h3>
+                    <div id="exchange-rates" class="flex justify-center space-x-6">
+                        <!-- Exchange rates will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
 
@@ -216,7 +262,7 @@
 
     <script src="./node_modules/flowbite/dist/flowbite.min.js" defer></script>
     <script src="scripts/popUp.js" defer></script>
-    <script src="scripts/main.js" defer></script>
+    <script type="module" src="scripts/main.js"></script>
 </body>
 
 </html>
