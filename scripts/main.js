@@ -9,6 +9,8 @@ class EnvanterApp {
     this.exchangeAPI = new ExchangeRateAPI();
     this.products = [];
     this.filteredProducts = [];
+    this.lastCategory = localStorage.getItem("lastCategory") || "";
+    this.lastSearch = localStorage.getItem("lastSearch") || "";
     this.init();
   }
 
@@ -17,6 +19,18 @@ class EnvanterApp {
     await this.loadProducts();
     await this.loadExchangeRates();
     await this.loadCategories();
+
+    // Restore last search and category filter
+    const searchInput = document.getElementById("product-search");
+    const categoryFilter = document.getElementById("category-filter");
+    if (searchInput && this.lastSearch) {
+      searchInput.value = this.lastSearch;
+      this.handleSearch(this.lastSearch);
+    }
+    if (categoryFilter && this.lastCategory) {
+      categoryFilter.value = this.lastCategory;
+      this.filterByCategory(this.lastCategory);
+    }
   }
 
   setupEventListeners() {
@@ -30,15 +44,19 @@ class EnvanterApp {
 
     // Search functionality
     const searchInput = document.getElementById("product-search");
-    searchInput?.addEventListener("input", (e) =>
-      this.handleSearch(e.target.value)
-    );
+    searchInput?.addEventListener("input", (e) => {
+      const value = e.target.value;
+      this.handleSearch(value);
+      localStorage.setItem("lastSearch", value);
+    });
 
     // Category filter
     const categoryFilter = document.getElementById("category-filter");
-    categoryFilter?.addEventListener("change", (e) =>
-      this.filterByCategory(e.target.value)
-    );
+    categoryFilter?.addEventListener("change", (e) => {
+      const value = e.target.value;
+      this.filterByCategory(value);
+      localStorage.setItem("lastCategory", value);
+    });
 
     // Product detail buttons (using event delegation)
     const container = document.getElementById("products-container");

@@ -81,15 +81,24 @@
 /* Loading animations */
 @layer components {
     .skeleton {
-        @apply animate-pulse bg-gray-200 rounded;
+        animation: pulse 1.5s infinite;
+        background-color: #e5e7eb;
+        border-radius: 0.25rem;
     }
 
     .skeleton-text {
-        @apply h-4 bg-gray-200 rounded w-3/4 mb-2;
+        height: 1rem;
+        background-color: #e5e7eb;
+        border-radius: 0.25rem;
+        width: 75%;
+        margin-bottom: 0.5rem;
     }
 
     .skeleton-card {
-        @apply p-6 bg-white rounded-lg shadow-sm;
+        padding: 1.5rem;
+        background-color: #fff;
+        border-radius: 0.5rem;
+        box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     }
 }
 

@@ -70,7 +70,6 @@
     --ease-in: cubic-bezier(0.4, 0, 1, 1);
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
-    --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     --blur-sm: 8px;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -3151,23 +3150,22 @@
 }
 @layer components {
   .skeleton {
-    animation: var(--animate-pulse);
+    animation: pulse 1.5s infinite;
+    background-color: #e5e7eb;
     border-radius: 0.25rem;
-    background-color: var(--color-gray-200);
   }
   .skeleton-text {
-    margin-bottom: calc(var(--spacing) * 2);
-    height: calc(var(--spacing) * 4);
-    width: calc(3/4 * 100%);
+    height: 1rem;
+    background-color: #e5e7eb;
     border-radius: 0.25rem;
-    background-color: var(--color-gray-200);
+    width: 75%;
+    margin-bottom: 0.5rem;
   }
   .skeleton-card {
-    border-radius: var(--radius-lg);
-    background-color: var(--color-white);
-    padding: calc(var(--spacing) * 6);
-    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   }
 }
 .error-message {
